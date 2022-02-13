@@ -1,8 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:slr_sharemap/style.dart';
 
+import 'generated/l10n.dart';
 import 'home_screen.dart';
 
 void main() => runApp(MyApp());
@@ -15,6 +17,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "SlrPhotos",
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+
       theme: ThemeData(
         brightness: Brightness.dark,
         elevatedButtonTheme: ElevatedButtonThemeData(

@@ -21,5 +21,85 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "activities": MessageLookupByLibrary.simpleMessage("activities"),
+        "add": MessageLookupByLibrary.simpleMessage("add"),
+        "addComment": MessageLookupByLibrary.simpleMessage("Add Comment.."),
+        "appTitle": MessageLookupByLibrary.simpleMessage("DaitaInstagram"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "cancelConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure to want cancel?"),
+        "changeProfilePhoto":
+            MessageLookupByLibrary.simpleMessage("Change Profile Photo"),
+        "changeToDarkTheme":
+            MessageLookupByLibrary.simpleMessage("Change to Dart Theme"),
+        "changeToLightTheme":
+            MessageLookupByLibrary.simpleMessage("Change to Light Theme"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
+        "comments": MessageLookupByLibrary.simpleMessage("Comments"),
+        "country": MessageLookupByLibrary.simpleMessage("Country"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "deleteComment": MessageLookupByLibrary.simpleMessage("Delete Comment"),
+        "deleteCommentConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure to want to delete your comment?"),
+        "deletePost": MessageLookupByLibrary.simpleMessage("Delete Post"),
+        "deletePostConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure to want to delete your post?"),
+        "deletePostSucceeded":
+            MessageLookupByLibrary.simpleMessage("Your post has been updated."),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "editInfo": MessageLookupByLibrary.simpleMessage("Edit Information"),
+        "editPost": MessageLookupByLibrary.simpleMessage("Edit Post"),
+        "editPostConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure to want to update your post?"),
+        "editPostFailed":
+            MessageLookupByLibrary.simpleMessage("Post edit failed."),
+        "editPostSucceeded":
+            MessageLookupByLibrary.simpleMessage("Your post has been updated."),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "editProfileConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure to want to update your profile?"),
+        "editProfileFailed":
+            MessageLookupByLibrary.simpleMessage("Profile edit failed."),
+        "editProfileSucceeded": MessageLookupByLibrary.simpleMessage(
+            "Your profile has been updated."),
+        "follow": MessageLookupByLibrary.simpleMessage("Follow"),
+        "followers": MessageLookupByLibrary.simpleMessage("Followers"),
+        "followings": MessageLookupByLibrary.simpleMessage("Followings"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "home": MessageLookupByLibrary.simpleMessage("home"),
+        "inputCaption":
+            MessageLookupByLibrary.simpleMessage("Input caption..."),
+        "inputPlace": MessageLookupByLibrary.simpleMessage("Add place"),
+        "latitude": MessageLookupByLibrary.simpleMessage("Latitude"),
+        "likes": MessageLookupByLibrary.simpleMessage("Likes"),
+        "locationName": MessageLookupByLibrary.simpleMessage("LocationName"),
+        "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
+        "post": MessageLookupByLibrary.simpleMessage("Post"),
+        "postConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to post?"),
+        "postFailed": MessageLookupByLibrary.simpleMessage("Post Failed!"),
+        "postSucceeded":
+            MessageLookupByLibrary.simpleMessage("Post Succeeded!"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "search": MessageLookupByLibrary.simpleMessage("search"),
+        "selectLocation": MessageLookupByLibrary.simpleMessage(
+            "Select location info from below.."),
+        "selectPlace": MessageLookupByLibrary.simpleMessage("Select Place"),
+        "share": MessageLookupByLibrary.simpleMessage("Share"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sing In"),
+        "signInFailed": MessageLookupByLibrary.simpleMessage("Sign in failed."),
+        "signOut": MessageLookupByLibrary.simpleMessage("Sign Out"),
+        "signOutConfirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to sign out?"),
+        "state": MessageLookupByLibrary.simpleMessage("State"),
+        "unFollow": MessageLookupByLibrary.simpleMessage("UnFollow"),
+        "underProcessing":
+            MessageLookupByLibrary.simpleMessage("Processing..."),
+        "user": MessageLookupByLibrary.simpleMessage("user"),
+        "userCansel": MessageLookupByLibrary.simpleMessage("Canceled by user."),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
+      };
 }
