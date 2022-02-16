@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slr_sharemap/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("HomeScreen"),
+        child: Text(S.of(context).appTitle),
       ),
     );
   }

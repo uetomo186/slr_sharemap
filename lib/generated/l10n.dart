@@ -80,10 +80,10 @@ class S {
     );
   }
 
-  /// `DaitaInstagram`
+  /// `slrsharemap`
   String get appTitle {
     return Intl.message(
-      'DaitaInstagram',
+      'slrsharemap',
       name: 'appTitle',
       desc: '',
       args: [],
