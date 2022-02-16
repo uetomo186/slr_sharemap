@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
         "add": MessageLookupByLibrary.simpleMessage("add"),
         "addComment": MessageLookupByLibrary.simpleMessage("Add Comment.."),
-        "appTitle": MessageLookupByLibrary.simpleMessage("DaitaInstagram"),
+        "appTitle": MessageLookupByLibrary.simpleMessage("slrsharemap"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancelConfirm": MessageLookupByLibrary.simpleMessage(
