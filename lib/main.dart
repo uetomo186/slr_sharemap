@@ -4,10 +4,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:slr_sharemap/firebase_options.dart';
-import 'package:slr_sharemap/style.dart';
 
 import 'generated/l10n.dart';
-import 'home_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,17 +35,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white30,
-          )
-        ),
-            primaryIconTheme:IconThemeData(
-              color: Colors.white,
+            style: ElevatedButton.styleFrom(
+          primary: Colors.white30,
+        )),
+        primaryIconTheme: IconThemeData(
+          color: Colors.white,
         ),
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
-        fontFamily: RegularFont,
       ),
       //TODO
       home: HomeScreen(),
