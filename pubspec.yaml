@@ -29,6 +29,7 @@ dependencies:
   firebase_auth: ^3.3.7
   firebase_analytics: ^9.1.0
   provider: ^6.0.3
+  font_awesome_flutter: ^10.1.0
 
   google_sign_in: ^5.2.3
 
