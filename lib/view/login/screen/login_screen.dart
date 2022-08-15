@@ -1,9 +1,11 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:slr_sharemap/generated/l10n.dart';
+import 'package:slr_sharemap/screens/home_screen.dart';
 import 'package:slr_sharemap/view/common/components/button_with_icon.dart';
 import 'package:slr_sharemap/view_models/login_view_model.dart';
 
@@ -31,7 +33,19 @@ class LoginScreen extends StatelessWidget {
   }
 
   login(BuildContext context) async {
-    final LoginViewModel = Provider.of<LoginViewModel>(context, listen: false);
-    await LoginViewModel.signIn();
+    final loginViewModel = Provider.of<LoginViewModel>(context, listen: false);
+    await loginViewModel.signIn();
+    if (!loginViewModel.isSuccessful) {
+      Fluttertoast.showToast(msg: S.of(context).signInFailed);
+      return;
+    }
+    _openHomeScreen(context);
+  }
+
+  void _openHomeScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => HomeScreen()),
+    );
   }
 }

@@ -13,7 +13,7 @@ class LoginViewModel extends ChangeNotifier {
     return await userRepository.isSingIn();
   }
 
-  Future<void> signIn() {
+  Future<void> signIn() async {
     isLoading = true;
     notifyListeners();
 
