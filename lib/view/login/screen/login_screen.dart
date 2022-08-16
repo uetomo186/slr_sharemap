@@ -14,19 +14,25 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(S.of(context).appTitle),
-            SizedBox(
-              height: 8.0,
-            ),
-            ButtonWithIcon(
-              iconData: FontAwesomeIcons.arrowRightFromBracket,
-              label: S.of(context).signIn,
-              onPressed: () => login(context),
-            ),
-          ],
+        child: Consumer<LoginViewModel>(
+          builder: (context, model, child) {
+            return model.isLoading
+                ? CircularProgressIndicator()
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(S.of(context).appTitle),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      ButtonWithIcon(
+                        iconData: FontAwesomeIcons.arrowRightFromBracket,
+                        label: S.of(context).signIn,
+                        onPressed: () => login(context),
+                      ),
+                    ],
+                  );
+          },
         ),
       ),
     );
