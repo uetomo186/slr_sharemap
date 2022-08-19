@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:slr_sharemap/generated/l10n.dart';
+import 'package:slr_sharemap/utils/constants.dart';
 import 'package:slr_sharemap/view/common/components/button_with_icon.dart';
+import 'package:slr_sharemap/view/post/screens/post_upload_screen.dart';
 
 class PostPage extends StatelessWidget {
   @override
@@ -17,7 +19,8 @@ class PostPage extends StatelessWidget {
             ButtonWithIcon(
               iconData: FontAwesomeIcons.images,
               label: S.of(context).gallery,
-              onPressed: null,
+              onPressed: () =>
+                  _openPostUploadScreen(UploadType.GALLERY, context),
             ),
             SizedBox(
               height: 24.0,
@@ -25,11 +28,20 @@ class PostPage extends StatelessWidget {
             ButtonWithIcon(
               iconData: FontAwesomeIcons.camera,
               label: S.of(context).camera,
-              onPressed: null,
+              onPressed: () =>
+                  _openPostUploadScreen(UploadType.CAMERA, context),
             ),
           ],
         ),
       )),
+    );
+  }
+
+  _openPostUploadScreen(UploadType uploadType, BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (_) => PostUploadScreen(uploadType: uploadType)),
     );
   }
 }
