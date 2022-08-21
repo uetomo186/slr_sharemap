@@ -6,6 +6,9 @@ class PostViewModel extends ChangeNotifier {
   final UserRepository userRepository;
   final PostRepository postRepository;
 
+  bool isProcessing = false;
+  bool isImagePicked = false;
+
   PostViewModel({
     required this.userRepository,
     required this.postRepository,
