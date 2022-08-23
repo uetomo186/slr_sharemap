@@ -66,6 +66,14 @@
     	</dict>
     </array>
     <!-- End of the Google Sign-in Section -->
+		<!-- image_picker Section -->
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>Your Photo Library is required for this app</string>
+		<key>NSCameraUsageDescription</key>
+		<string>Your Camera Library is required for this app</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Your Microphone Library is required for this app</string>
+		<!-- End of the image_picker Section -->
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 </dict>
