@@ -74,6 +74,12 @@
 		<key>NSMicrophoneUsageDescription</key>
 		<string>Your Microphone Library is required for this app</string>
 		<!-- End of the image_picker Section -->
+		<!-- geolocator Section -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Required to post location information when posting photos and videos.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Required to post location information when posting photos and videos.</string>
+    <!-- End of the geolocator Section -->
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 </dict>
