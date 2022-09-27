@@ -1,6 +1,8 @@
+import 'package:geocoding/geocoding.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:slr_sharemap/models/db/database_manager.dart';
+import 'package:slr_sharemap/models/location/location.manager.dart';
 import 'package:slr_sharemap/models/repositories/post_repository.dart';
 import 'package:slr_sharemap/models/repositories/user_repository.dart';
 import 'package:slr_sharemap/view_models/login_view_model.dart';
@@ -16,11 +18,13 @@ List<SingleChildWidget> independentModels = [
   Provider<DatabaseManager>(
     create: (_) => DatabaseManager(),
   ),
+  Provider<LocationManager>(create: (_) => LocationManager()),
 ];
 
 List<SingleChildWidget> dependentModels = [
-  ProxyProvider<DatabaseManager, UserRepository>(
-    update: (_, dbManager, repo) => UserRepository(dbManager: dbManager),
+  ProxyProvider2<DatabaseManager, LocationManager, UserRepository>(
+    update: (_, dbManager, LocationManager, repo) =>
+        UserRepository(dbManager: dbManager),
   ),
 ];
 
