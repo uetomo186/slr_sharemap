@@ -28,4 +28,8 @@ class PostRepository {
       return (pickedImage != null) ? File(pickedImage.path) : null;
     }
   }
+
+  Future getCurrentLocation() async {
+    return await locationManager.getCurrentLocation();
+  }
 }

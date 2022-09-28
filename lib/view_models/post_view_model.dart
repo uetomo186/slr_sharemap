@@ -11,6 +11,8 @@ class PostViewModel extends ChangeNotifier {
 
   File? imageFile;
 
+  Location? location;
+
   bool isProcessing = false;
   bool isImagePicked = false;
 
@@ -25,6 +27,8 @@ class PostViewModel extends ChangeNotifier {
     notifyListeners();
 
     imageFile = (await postRepository.pickImage(uploadType)) as File?;
+
+    location = await postRepository.getCurrentLocation();
 
     if (imageFile != null) isImagePicked = true;
     isProcessing = false;
